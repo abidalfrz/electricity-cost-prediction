@@ -47,9 +47,9 @@ electricity-cost-prediction/
 ├── notebooks/
 │   └── predictions.ipynb       # EDA, visualization, training, and testing model
 ├── models/
-│   └── final_model.pkl      # Saved trained model
+│   └── model_final.pkl      # Saved trained model
 ├── submission/
-│   └── submission.csv       # Output file to be uploaded to Kaggle
+│   └── submission_final.csv       # Output file to be uploaded to Kaggle
 ├── requirements.txt         # Python dependencies
 ├── README.md                # Project documentation
 ```
@@ -82,7 +82,7 @@ This project follows a typical machine learning workflow:
    - Best-performing model: **Gradient Boosting (GB)**.
 
 6. Prediction & Submission
-   - Final predictions were generated using the best model.
+   - The final model is built using `sklearn.pipeline.Pipeline`, which encapsulates both the preprocessing steps (via `ColumnTransformer`) and the best model (`GradientBoostingRegressor`). This approach ensures that all data transformations are applied consistently during both training and prediction.
    - Submission file prepared in the required Kaggle format.
 
 ---
@@ -103,7 +103,6 @@ The **Gradient Boosting model** outperformed the others with the **lowest RMSE (
 
 ---
 
-
 ## 📂 Dataset & Credits
 
 The dataset used in this project was sourced from a Kaggle dataset. You can access the original dataset and challenge description via the following link:
@@ -111,3 +110,52 @@ The dataset used in this project was sourced from a Kaggle dataset. You can acce
 🔗 [The Electricity Cost Prediction Challenge](https://www.kaggle.com/datasets/gauravduttakiit/the-electricity-cost-prediction-challenge)
 
 We would like to extend our appreciation to the organizers and dataset contributors for making this resource available for public use.
+
+---
+
+## 🚀 How to Run
+
+To run this project on your local machine, follow these steps:
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/electricity-cost-prediction.git
+cd electricity-cost-prediction
+```
+
+### 2. Create and Activate a Virtual Environment (Optional but Recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate      # On Linux/macOS
+venv\Scripts\activate.bat     # On Windows
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Jupyter Notebook
+
+Make sure you have Jupyter installed, then run:
+
+```bash
+jupyter notebook notebooks/predictions.ipynb
+```
+
+You can explore:
+- Data preprocessing
+- Exploratory Data Analysis (EDA)
+- Model training and evaluation
+- Generating final predictions for submission
+
+### 5. Generate Submission
+
+The final predictions will be saved as:
+
+```bash
+submission/submission_final.csv
+```
