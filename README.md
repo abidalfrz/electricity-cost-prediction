@@ -93,13 +93,13 @@ Several regression models were evaluated to predict electricity cost. The perfor
 
 | Model                 | RMSE        | R²       |
 |----------------------|-------------|----------|
-| Gradient Boosting (gb) | **3899.40**   | **0.2518** |
-| LightGBM (lgbm)        | 3964.04   | 0.2268 |
-| CatBoost               | 3970.98   | 0.2241 |
-| Random Forest (rf)     | 4007.05   | 0.2099 |
-| XGBoost (xgb)          | 4156.70   | 0.1498 |
+| Gradient Boosting (gb) | **3845.02**   | **0.2518** |
+| LightGBM (lgbm)        | 3905.12   | 0.2268 |
+| CatBoost               | 3921.79   | 0.2241 |
+| Random Forest (rf)     | 3935.05   | 0.2099 |
+| XGBoost (xgb)          | 4135.62   | 0.1498 |
 
-The **Gradient Boosting model** outperformed the others with the **lowest RMSE (3899.40)** and the **highest R² score (0.2518)**, and was selected as the final model for inference.
+The **Gradient Boosting model** outperformed the others with the **lowest RMSE (3845.02)** and the **highest R² score (0.2518)**, and was selected as the final model for inference.
 
 ---
 
