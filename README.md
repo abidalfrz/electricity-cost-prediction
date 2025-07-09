@@ -1,14 +1,16 @@
 # Electricity Cost Prediction
 
-This repository contains a complete pipeline for a machine learning project aimed at predicting **electricity cost** using structured features such as building usage, population, environmental and utility metrics. The dataset comes from a Kaggle competition.
+This repository contains a machine learning project focused on predicting electricity costs based on various infrastructure and environmental features. The dataset originates from a Kaggle dataset and includes real-world attributes such as water consumption, recycling rate, air quality index, and more. The main goal is to build a regression model that accurately estimates electricity cost per building.
 
 ---
 
-## 📌 Overview
+## 📌 Problem Statement
 
-This project tackles a regression problem, where the objective is to predict the **Electricity Cost** . The dataset includes multiple categorical and numerical attributes that reflect building structure, air quality, water usage, and more.
+With the rising demand for energy efficiency in urban environments, predicting electricity consumption is critical for better resource management. This project aims to:
 
-The data was sourced from a Kaggle dataset and includes `train.csv`, `test.csv`, and a `sample_submission.csv` file.
+- Develop a regression model to predict `Electricity_cost`.
+- Understand the impact of environmental and structural features on electricity cost.
+- Evaluate and compare model performance using RMSE and R-Square.
 
 ---
 
@@ -29,3 +31,35 @@ The dataset contains the following features:
 | `Electricity_cost`            | Target variable: electricity cost in currency   | Numerical    |
 
 ---
+
+## 🧪 Project Structure
+
+```bash
+electricity-cost-prediction/
+├── data/
+│   ├── raw/                 # Original Kaggle datasets
+│   │   ├── train.csv
+│   │   ├── test.csv
+│   │   └── sample_submission.csv
+│   └── processed/           # Cleaned, encoded, and feature-engineered datasets
+│       ├── train_processed.csv
+│       └── test_processed.csv
+├── notebooks/
+│   └── predictions.ipynb       # EDA, visualization, training, and testing model
+├── models/
+│   └── final_model.pkl      # Saved trained model
+├── submission/
+│   └── submission.csv       # Output file to be uploaded to Kaggle
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
+```
+
+---
+
+## 📂 Dataset & Credits
+
+The dataset used in this project was sourced from a Kaggle dataset. You can access the original dataset and challenge description via the following link:
+
+🔗 [The Electricity Cost Prediction Challenge](https://www.kaggle.com/datasets/gauravduttakiit/the-electricity-cost-prediction-challenge)
+
+We would like to extend our appreciation to the organizers and dataset contributors for making this resource available for public use.
