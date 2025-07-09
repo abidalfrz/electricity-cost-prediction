@@ -79,6 +79,7 @@ This project follows a typical machine learning workflow:
 
 5. Model Evaluation
    - Models were evaluated using RMSE and R² metrics on the validation set.
+   - Visualized feature importance using SHAP values.
    - Best-performing model: **Gradient Boosting (GB)**.
 
 6. Prediction & Submission
