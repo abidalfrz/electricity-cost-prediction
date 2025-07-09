@@ -82,7 +82,7 @@ This project follows a typical machine learning workflow:
    - Best-performing model: **Gradient Boosting (GB)**.
 
 6. Prediction & Submission
-   - The final model is built using `sklearn.pipeline.Pipeline`, which encapsulates both the preprocessing steps (via `ColumnTransformer`) and the best model (`GradientBoostingRegressor`). This approach ensures that all data transformations are applied consistently during both training and prediction.
+   - The final model is built using `sklearn.pipeline.Pipeline`, which encapsulates both the preprocessing steps (via `ColumnTransformer`) and the best model. This approach ensures that all data transformations are applied consistently during both training and prediction.
    - Submission file prepared in the required Kaggle format.
 
 ---
@@ -120,7 +120,7 @@ To run this project on your local machine, follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/electricity-cost-prediction.git
+git clone https://github.com/abidalfrz/electricity-cost-prediction.git
 cd electricity-cost-prediction
 ```
 
