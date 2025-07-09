@@ -47,9 +47,9 @@ electricity-cost-prediction/
 ├── notebooks/
 │   └── predictions.ipynb       # EDA, visualization, training, and testing model
 ├── models/
-│   └── model_final.pkl      # Saved trained model
+│   └── model_final.pkl      # Saved trained final model
 ├── submission/
-│   └── submission_final.csv       # Output file to be uploaded to Kaggle
+│   └── submission_final.csv       # Output file 
 ├── requirements.txt         # Python dependencies
 ├── README.md                # Project documentation
 ```
