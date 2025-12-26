@@ -170,7 +170,7 @@ python app.py
 # The Webapp will be accessible at http://localhost:5000
 ```
 
-### 5. 5. Access the Application
+### 5. Access the Application
 
 Open your web browser and navigate to `http://localhost:5000` to access the house price prediction web app.
 
