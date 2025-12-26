@@ -14,7 +14,15 @@ With the rising demand for energy efficiency in urban environments, predicting e
 
 ---
 
-## 🧠 Features
+## 🧠 Features (Webapp)
+
+- Electricity Cost Prediction: Utilizes a Gradient Boosting regression model to predict electricity costs based on user-input features.
+- Easy-to-use Interface: A web application built with Flask that allows users to input relevant features and receive instant predictions.
+- Responsive Design: Built with Bootstrap for a clean and user-friendly experience.
+
+---
+
+## 📊 Features (Dataset)
 
 The dataset contains the following features:
 
@@ -28,7 +36,7 @@ The dataset contains the following features:
 | `Air_Quality_Index`           | Pollution index in the area                        | Numerical    |
 | `Issue_Resolution_Time`       | Avg. time to resolve infrastructure issues   | Numerical    |
 | `Resident_Count`              | Number of residents per structure                  | Numerical    |
-| `Electricity_cost`            | Target variable: electricity cost in currency   | Numerical    |
+| `Electricity_cost`            | Target variable: electricity cost    | Numerical    |
 
 ---
 
@@ -45,13 +53,27 @@ electricity-cost-prediction/
 │       ├── train_processed.csv
 │       └── test_processed.csv
 ├── notebooks/
-│   └── predictions.ipynb       # EDA, visualization, training, and testing model
-├── models/
-│   └── model_final.pkl      # Saved trained final model
+│   └── main.ipynb       # EDA, visualization, training, and testing model
+├── artifacts/
+│       ├── model.pkl              # Trained model file
+│       └── preprocessor.pkl       # Preprocessing pipeline file
 ├── submission/
 │   └── submission_final.csv       # Output file 
-├── requirements.txt         # Python dependencies
-├── README.md                # Project documentation
+├── services/
+│   ├── preprocessing.py     # Data preprocessing functions
+│   └── predictor.py        # Model prediction functions
+├── static/                   # Static files for the web app
+│   ├── css/
+│   └── js/
+├── templates/                # HTML templates for the web app
+│   ├── base.html
+│   ├── index.html
+│   ├── predict.html
+│   └── result.html
+├── app.py                    # Main application entry point
+├── requirements.txt         # Python dependencies list
+├── .gitignore
+├── README.md                
 ```
 
 ---
@@ -139,16 +161,22 @@ venv\Scripts\activate.bat     # On Windows
 pip install -r requirements.txt
 ```
 
-### 4. Run the Jupyter Notebook
-
-Make sure you have Jupyter installed, then run:
+### 4. Run the application
 
 ```bash
-jupyter notebook notebooks/predictions.ipynb
+# Run the flask application
+python app.py
+
+# The Webapp will be accessible at http://localhost:5000
 ```
 
-You can explore:
-- Data preprocessing
-- Exploratory Data Analysis (EDA)
-- Model training and evaluation
-- Generating final predictions for submission
+### 5. 5. Access the Application
+
+Open your web browser and navigate to `http://localhost:5000` to access the house price prediction web app.
+
+1. Click on "Start Prediction".
+2. Fill in the required features in the form.
+3. Cliclk "CALCULATE COST" to get the predicted electricity cost.
+
+---
+

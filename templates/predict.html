@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg border-0 glass-effect animate-fade-in">
+                <div class="card-header bg-transparent border-0 text-center pt-4">
+                    <h2 class="text-white fw-bold"><i class="fas fa-calculator me-2"></i>Enter Building Details</h2>
+                </div>
+                <div class="card-body p-5">
+                    <form action="/predict" method="POST">
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="Site_Area" class="form-label text-white fw-semibold">Site Area</label>
+                                <select class="form-select" id="Site_Area" name="Site_Area" required>
+                                    <option value="" selected disabled>Select Location</option>
+                                    <option value="Hebbal">Hebbal</option>
+                                    <option value="Koramangala">Koramangala</option>
+                                    <option value="Banashankari">Banashankari</option>
+                                    <option value="Yelahanka">Yelahanka</option>
+                                    <option value="Malleshwaram">Malleshwaram</option>
+                                    <option value="BTM Layout">BTM Layout</option>
+                                    <option value="Indiranagar">Indiranagar</option>
+                                    <option value="Jayanagar">Jayanagar</option>
+                                    <option value="Electronic City">Electronic City</option>
+                                    <option value="Whitefield">Whitefield</option>
+                                    <option value="HSR Layout">HSR Layout</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="Structure_Type" class="form-label text-white fw-semibold">Structure Type</label>
+                                <select class="form-select" id="Structure_Type" name="Structure_Type" required>
+                                    <option value="" selected disabled>Select Type</option>
+                                    <option value="Residential">Residential</option>
+                                    <option value="Institutional">Institutional</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Industrial">Industrial</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-white fw-semibold">Water Consumption / Bldg</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-tint"></i></span>
+                                    <input type="number" step="any" class="form-control" name="Water_Consumption_Per_Building" placeholder="e.g. 150.5" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-white fw-semibold">Recycling Rate (%)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-recycle"></i></span>
+                                    <input type="number" step="any" class="form-control" name="Recycling_Rate" placeholder="0 - 100" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-white fw-semibold">Utilization Rate</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-chart-line"></i></span>
+                                    <input type="number" step="any" class="form-control" name="Utilization_Rate" placeholder="e.g. 0.85" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-white fw-semibold">Air Quality Index</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-wind"></i></span>
+                                    <input type="number" step="any" class="form-control" name="Air_Quality_Index" placeholder="AQI Value" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-white fw-semibold">Average Issue Resolution Time (Hrs)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                                    <input type="number" step="any" class="form-control" name="Issue_Resolution_Time" placeholder="Hours" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-white fw-semibold">Resident Count</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-users"></i></span>
+                                    <input type="number" class="form-control" name="Resident_Count" placeholder="Number of people" required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn btn-warning w-100 py-3 fw-bold shadow-effect">
+                                    CALCULATE COST <i class="fas fa-bolt ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

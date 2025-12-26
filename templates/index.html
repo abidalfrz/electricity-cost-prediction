@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section d-flex align-items-center text-center text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 fw-bold mb-3 animate-up">Optimize Your Energy</h1>
+                <p class="lead mb-5 animate-up delay-1">
+                    Leverage Artificial Intelligence to predict electricity <br>
+                    costs based on environmental and structural parameters.
+                </p>
+                <a href="{{ url_for('predict') }}" class="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-bold animate-up delay-2 shadow-effect">
+                    Start Prediction <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

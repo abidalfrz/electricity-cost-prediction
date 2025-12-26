@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <div class="col-lg-6">
+        <div class="card glass-effect border-0 text-center p-5 shadow-lg animate-up">
+            <div class="mb-4">
+                <i class="fas fa-check-circle text-success fa-5x"></i>
+            </div>
+            <h2 class="text-white mb-3">Estimated Electricity Cost</h2>
+            
+            <div class="display-3 fw-bold text-warning mb-4">
+                ₹ <span id="cost-counter" data-target="{{ cost }}">0</span>
+            </div>
+
+            <p class="text-white-50 mb-4">
+                This calculation is based on the parameters provided for the selected area and structure type.
+            </p>
+            
+            <a href="{{ url_for('home') }}" class="btn btn-outline-light me-2">Back Home</a>
+            <a href="{{ url_for('predict') }}" class="btn btn-warning fw-bold">Predict Again</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
