@@ -40,7 +40,7 @@ The dataset contains the following features:
 
 ---
 
-## 🧪 Project Structure
+## 📁 Project Structure
 
 ```bash
 electricity-cost-prediction/
