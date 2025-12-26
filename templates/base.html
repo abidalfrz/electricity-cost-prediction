@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <div id="particles-js"></div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
         <div class="container">
@@ -18,7 +19,7 @@
         </div>
     </nav>
 
-    <div class="container mt-5 pt-5">
+    <div class="container mt-5 pt-5" style="position: relative; z-index: 2;">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
@@ -31,16 +32,20 @@
         {% endwith %}
     </div>
 
-    <main>
+    <main style="position: relative; z-index: 2;">
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="text-center text-white py-4 mt-auto">
-        <p>&copy; Electricity Cost Predictor.
-        <br> Developed by Muhammad Abid Baihaqi Al Faridzi</p>
+    <footer class="text-center text-white py-4 mt-auto" style="position: relative; z-index: 2;">
+        <p>&copy; Electricity Cost Predictor. 
+            <br> Developed by Muhammad Abid Baihaqi Al Faridzi
+        </p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

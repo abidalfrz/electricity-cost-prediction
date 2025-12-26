@@ -3,29 +3,38 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* Gradient Background yang modern */
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative; 
 }
 
-/* Hero Section */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent; 
+    z-index: 0; 
+}
+
 .hero-section {
     min-height: 100vh;
     padding-top: 60px;
+    position: relative;
+    z-index: 2; 
 }
 
-/* Glassmorphism Effect for Cards */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05); /* Lebih transparan dari sebelumnya (0.1) */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 15px;
 }
 
-/* Form Styles */
 .form-label {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
@@ -44,7 +53,6 @@ body {
     border-bottom-left-radius: 5px;
 }
 
-/* Animations */
 .animate-up {
     animation: fadeInUp 0.8s ease-out forwards;
     opacity: 0;
@@ -70,7 +78,6 @@ body {
     to { opacity: 1; }
 }
 
-/* Button Effects */
 .btn-warning {
     background-color: #f1c40f;
     border: none;
