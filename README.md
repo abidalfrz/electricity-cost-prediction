@@ -49,6 +49,7 @@ The dataset contains the following features:
 - **Scikit-learn**
 - **Matplotlib & Seaborn**
 - **HTML, CSS, JavaScript**
+- **Jupyter Notebook**
 
 ## 📁 Project Structure
 
