@@ -40,6 +40,16 @@ The dataset contains the following features:
 
 ---
 
+## 🛠️ Tech Stack
+
+- **Python**
+- **Flask**
+- **Pandas**
+- **Numpy**
+- **Scikit-learn**
+- **Matplotlib & Seaborn**
+- **HTML, CSS, JavaScript**
+
 ## 📁 Project Structure
 
 ```bash
